@@ -2,6 +2,7 @@ export default {
   async fetch(req, env, ctx) {
     if (req.method === "OPTIONS" && req.headers.has("origin")) {
       if (
+        req.headers.get("origin").endsWith("ua-tax.web.app") ||
         req.headers.get("origin").endsWith("italks.com.ua") ||
         req.headers.get("origin").endsWith("mac-blog.org.ua") ||
         req.headers.get("origin").includes("localhost")
