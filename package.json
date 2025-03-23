@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "npx wrangler dev",
+    "deploy": "npx wrangler deploy",
+    "outdated": "npx npm-check-updates",
+    "upgrade": "npm run outdated -- -u",
+    "format": "npx prettier --write ."
+  },
+  "prettier": {
+    "printWidth": 140
+  }
+}

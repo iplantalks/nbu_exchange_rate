@@ -1,0 +1,14 @@
+{
+  "name": "nbu_exchange_rate",
+  "main": "index.js",
+  "compatibility_date": "2024-12-16",
+  "routes": [
+    {
+      "pattern": "nbu-exchange-rate.italks.com.ua",
+      "custom_domain": true
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
