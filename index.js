@@ -9,7 +9,7 @@ export default {
       ) {
         return new Response(null, {
           headers: {
-            "access-control-allow-origin": req.headers.get("origin"),
+            "access-control-allow-origin": "*", // req.headers.get("origin"),
             "access-control-allow-methods": "*",
             "access-control-allow-headers": "*",
             "access-control-expose-headers": "*",
@@ -19,7 +19,7 @@ export default {
       return new Response(null, { status: 403 });
     }
 
-    var ttl = 24 * 60 * 60;
+    var ttl = 7 * 24 * 60 * 60;
     var url = new URL(req.url);
 
     if (!url.pathname.startsWith("/NBUStatService/v1/statdirectory/exchange")) {
@@ -39,7 +39,7 @@ export default {
 
     response = Response.json(json, {
       headers: {
-        "access-control-allow-origin": req.headers.get("origin") || "*",
+        "access-control-allow-origin": "*", // req.headers.get("origin") || "*",
         "access-control-allow-methods": "*",
         "access-control-allow-headers": "*",
         "access-control-expose-headers": "*",
